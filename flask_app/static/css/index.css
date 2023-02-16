@@ -1,0 +1,23 @@
+h1 {
+    font-size: 50px;
+    line-height: 50px;
+  }
+  
+  h2 {
+    font-size: 30px;
+    line-height: 25px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+.divider:after,
+.divider:before {
+content: "";
+flex: 1;
+height: 1px;
+background: #eee;
+}
+
+
