@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="static/css/dashboard.css">
+</head>
+<body>
+    <div style="background: url(https://www.shutterstock.com/image-vector/linguistics-language-communication-scientific-study-260nw-2057761496.jpg)" class="bg-cover">
+        <div class="container py-1 text-center">
+            <h1 class="display-6 font-weight-bold">TriLingo</h1>
+            <p class="font-italic mb-0">Website for English, Spanish, and Chinese learners</p>
+        </div>
+    </div>
+    <header>
+        <!--- Navbar --->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand text-white"><i class="fa fa-graduation-cap fa-lg mr-2"></i>DASHBOARD - {{user.first_name}} {{user.last_name}}</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nvbCollapse" aria-controls="nvbCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="nvbCollapse">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item pl-1">
+                            <a class="nav-link" a href="/phrases"><i class="fa fa-home fa-fw mr-1"></i>Basic Phrases</a>
+                        </li>
+                        <li class="nav-item pl-1">
+                            <a class="nav-link" a href="/numbers"><i class="fa fa-th-list fa-fw mr-1" ></i>Numbers</a>
+                        </li>
+                        <li class="nav-item pl-1">
+                            <a class="nav-link" a href="/colors"><i class="fa fa-info-circle fa-fw mr-1"></i>Colors</a>
+                        </li>
+                        <li class="nav-item pl-1">
+                            <a class="nav-link" a href="/notes"><i class="fa fa-info-circle fa-fw mr-1"></i>Notes</a>
+                        </li>
+                        <li class="nav-item pl-1">
+                            <a class="nav-link" a href="/translator"><i class="fa fa-info-circle fa-fw mr-1"></i>Translator</a>
+                        </li>
+                        <li class="nav-item account pl-1">
+                            <a href="/account" class="btn btn-info">Account</a>
+                        </li>
+                        <li class="nav-item active pl-1">
+                            <a href="/logout" class="btn btn-info">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!--# Navbar #-->
+        </header>
+    <br>
+    <div class="CSSgal">
+        <s id="s1"></s> 
+        <s id="s2"></s>
+        <s id="s3"></s>
+        <s id="s4"></s>
+        <div class="slider">
+            <div style="background:rgb(255, 255, 255);">
+                <img src="https://thespeakingcats.com/wp-content/uploads/2019/05/20610-1024x614.jpg" alt="Language Infographic" width="800" height="510">
+                </div>
+            <div style="background:hsl(48deg 83% 86%);">
+                <img src="https://infographicnow.com/wp-content/uploads/2019/08/Educational-infographic-Educational-infographic-English-language-infographics.jpg" alt="Chinese Infographic" width="900" height="510">
+                </div>
+            <div style="background:hsl(356deg 65% 40%);">
+                <img src="https://www.gvsu.edu/cms4/asset/116367E5-FD53-3BCB-8D6879FA0EE4074F/spanishinfographic-01[1440084124].png" alt="Spanish Infographic" width="800" height="510">
+                </div>
+            <div style="background:hsl(0deg 100% 39%);">
+                <img src="https://www.gvsu.edu/cms4/asset/116367E5-FD53-3BCB-8D6879FA0EE4074F/chineseinfographic-01-01[1440085449].png" alt="Chinese Infographic" width="800" height="510">
+                </div>
+        </div>
+        
+        <div class="prevNext">
+        <div><a href="#s4"></a><a href="#s2"></a></div>
+        <div><a href="#s1"></a><a href="#s3"></a></div>
+        <div><a href="#s2"></a><a href="#s4"></a></div>
+        <div><a href="#s3"></a><a href="#s1"></a></div>
+        </div>
+    
+        <div class="bullets">
+        <a href="#s1">1</a>
+        <a href="#s2">2</a>
+        <a href="#s3">3</a>
+        <a href="#s4">4</a>
+        </div>
+    
+    </div>
+        
+    <!--- Footer --->
+    <footer>
+        <div class="jumbotron jumbotron-fluid bg-secondary p-1 mt-5 mb-0">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 cizgi">
+                        <div class="card bg-secondary border-0">
+                            <div class="card-body text-light text-center">
+                                <h5 class="card-title text-white display-4" style="font-size:30px">TriLingo</h5>
+                            <p class="d-inline lead">TriLingo © 2023</p>
+    
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 cizgi">
+                        <div class="card bg-secondary border-0">
+                            <div class="card-body text-center">
+                                <h5 class="card-title text-white display-4" style="font-size:30px">Contact Us</h5>
+                                <a class="text-light d-block lead" style="margin-left: -20px" href="#"><i class="fa fa-phone mr-2"></i>(000) 000-0000</a>
+                                <a class="text-light d-block lead" href="#"><i class="fa fa-envelope mr-2"></i>admin@localhost.com</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                        <div class="card bg-secondary border-0">
+                            <div class="card-body text-center">
+                            <h5 class="card-title text-white display-4" style="font-size:30px">Social Media</h5>
+                            </div>
+                        </div>
+                    </div>	
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--# Footer #-->
+</body>
+</html>

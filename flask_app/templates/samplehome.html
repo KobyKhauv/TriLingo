@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample</title>
+    <link rel="stylesheet" href="style.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container"> 
+        <div class="container-data">
+        <form method="POST" action="/">
+        <input type="text" class="text" name="sentence" placeholder="Enter or Paste sentences" Required><br>
+        <select class="teamForm" id="teamDropdownSelector" type="text" name="inputvalue" placeholder="Select A Language" Required>
+            <option disabled selected>Select a Language</option>
+            <option id="WatfordVSManchester Utd" value="en">English</option>
+            <option id="WatfordVSManchester Utd" value="zh-cn">Chinese (Simplified)</option> 
+            <option id="WatfordVSManchester Utd" value="zh-tw">Chinese (Traditional)</option>
+            <option id="WatfordVSManchester Utd" value="es">Spanish</option>
+            
+        </select>
+        <br>
+            <button type="submit" class="btn btn-primary">TRANSLATE</button>
+        </form>
+        </div>
+        <div class="sentence">
+        <h2>{{sentence}}</h2>
+        </div>
+        <h2 style="text-align:center; font-size:20px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color:blue;margin-top:30px;"> Translated Sentences </h2>
+        <div class="output">
+            <h2>{{output}}</h2>
+            </div>
+        {% else %}
+        <div class="sentence">
+            <h2>Please Enter or Paste Text or Sentences.
+                The Translated Sentences will be shown here.
+            </h2>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TriLingo</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <div style="background: url(https://www.shutterstock.com/image-vector/linguistics-language-communication-scientific-study-260nw-2057761496.jpg)" class="bg-cover">
+        <div class="container py-1 text-center">
+            <h1 class="display-6 font-weight-bold">TriLingo</h1>
+            <p class="font-italic mb-0">Website for English, Spanish, and Chinese learners</p>
+        </div>
+    </div>
+    
+    <!-- For Demo Purpose -->
+    <!-- <div class="container py-5">
+        <h2 class="h3 font-weight-bold">Some demo content</h2>
+        <div class="row">
+            <div class="col-lg-10 mb-4">
+                <p class="font-italic text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.</p>
+            </div>
+        </div>
+    </div> -->
+
+<!-- Login and Registration -->
+    <div class="d-flex justify-content-around">
+        <form action="/register" method="post" class="col-4 p-4 bg-dark text-light">
+            <h2 class="text-primary">Register</h2>
+            {% with messages = get_flashed_messages(category_filter=['register']) %}
+                {% if messages %}
+                <div class="alert alert-danger" role="alert">
+                    <strong>Error</strong>
+                        {% for message in messages %}
+                        <p>{{message}}</p>
+                        {% endfor %}
+                </div>
+                {% endif %}
+            {% endwith %}
+            <div class="form-group">
+                <label for="first_name">First Name:</label>
+                <input type="text" name="first_name" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="last_name">Last Name:</label>
+                <input type="text" name="last_name" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="text" name="email" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" name="password" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="confirm">Confirm Password:</label>
+                <input type="password" name="confirm" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="confirm">Preferred Main Language:</label> <br>
+                <input type="radio" id="English" name="language" value="English">
+                <label for="English">English</label><br>
+                <input type="radio" id="Spanish" name="language" value="Spanish">
+                <label for="Spanish">Spanish - Español</label><br>
+                <input type="radio" id="Chinese" name="language" value="Chinese">
+                <label for="Chinese">Chinese Mandarin - 中文 Zhōngwén</label><br>
+            </div>
+            <input type="submit" value="Register" class="btn btn-primary">
+        </form>
+        <form action="/login" method="post" class="col-4 p-4 bg-dark text-light">
+            <h2 class="text-success">Login</h2>
+            {% with messages = get_flashed_messages(category_filter=['login']) %}
+                {% if messages %}
+                <div class="alert alert-danger" role="alert">
+                    <strong>Error</strong>
+                        {% for message in messages %}
+                        <p>{{message}}</p>
+                        {% endfor %}
+                </div>
+                {% endif %}
+            {% endwith %}
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="text" name="email" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" name="password" class="form-control">
+            </div>
+            
+            <input type="submit" value="Login" class="btn btn-success">
+        </form>
+    </div>
+</body>
+</html>
